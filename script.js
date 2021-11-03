@@ -6,7 +6,7 @@
          num1 = document.getElementById('n1').value;
          num1 = +num1;
 
-         if (isNaN (num1) || isNaN(num2)) {alert ("Error");}
+         if (isNaN (num1) || isNaN(num2)) {alert ("ERROR");}
          if (num1 == "" || num2 == "") { alert ("Введите число!");}
 
          num2 = document.getElementById('n2').value;
