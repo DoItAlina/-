@@ -10,10 +10,10 @@ let calc = {
     num2 = document.getElementById('n2').value;    
     num2 = parseInt(num2);
 
-  const isValid = (isFinite(num1)) && (isFinite(num2))
+  const isValid = (isFinite(num1))
    if (isValid) {
       this.input_num_1 = num1
-      this.input_num_2 = num2
+   
       
       return true
   } 
@@ -28,14 +28,14 @@ let calc = {
   function sum() {
         if (calc.check()) {
         let result =  this.input_num_1 + this.input_num_2
-          console.log(result)
+        
         document.getElementById('out').innerHTML = result;
     }
 }
-function sub() {
+/* function sub() {
     if (calc.check()) {
     let result =  this.input_num_1 - this.input_num_2
       console.log(result)
     document.getElementById('out').innerHTML = result;
 }
-}
+} */
