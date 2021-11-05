@@ -29,15 +29,29 @@ let calc = {
 
   function sum() {
         if (calc.check()) {
-        let result =  this.input_num_1 + this.input_num_2
+        let result =  calc.input_num_1 + calc.input_num_2
         
         document.getElementById('out').innerHTML = result;
     }
 }
-/* function sub() {
+function sub() {
     if (calc.check()) {
-    let result =  this.input_num_1 - this.input_num_2
-      console.log(result)
-    document.getElementById('out').innerHTML = result;
+        let result =  calc.input_num_1 - calc.input_num_2
+        
+        document.getElementById('out').innerHTML = result;
+    }
+} 
+function mult() {
+    if (calc.check()) {
+        let result =  calc.input_num_1 * calc.input_num_2
+        
+        document.getElementById('out').innerHTML = result;
+    }
 }
-} */
+function div () {
+    if (calc.check()) {
+        let result =  calc.input_num_1 / calc.input_num_2
+        
+        document.getElementById('out').innerHTML = result;
+    }
+} 
