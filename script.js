@@ -1,87 +1,41 @@
+let calc = {
+    input_num_1: 0,
 
+    input_num_2: 0,
 
-let num1, num2, result;
-function plus() {
-         
-     num1 = document.getElementById('n1').value;
-     num1 = +num1;
+    check: function () {
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
 
-     num2 = document.getElementById('n2').value;
-     num2 = +num2;
+    num2 = document.getElementById('n2').value;    
+    num2 = parseInt(num2);
 
-     if (isNaN (num1) || isNaN(num2)) {
-         
-      document.getElementById('out').innerHTML = 'ERROR';
-         return;
-     }
-     if (num1 === "" || num2 === "") { 
-      document.getElementById('out').innerHTML = 'Вы ничего не ввели!';
-          return;
-     }
-          
-     result = num1 + num2;
-     document.getElementById('out').innerHTML = result;
+  const isValid = (isFinite(num1)) && (isFinite(num2))
+   if (isValid) {
+      this.input_num_1 = num1
+      this.input_num_2 = num2
+      
+      return true
+  } 
+   else { 
+       document.getElementById('out').innerHTML = 'ERROR';
+          return false;
+  }
 }
-function minus() {
-         
-     num1 = document.getElementById('n1').value;
-     num1 = +num1;
 
-     num2 = document.getElementById('n2').value;
-     num2 = +num2;
-
-     if (isNaN (num1) || isNaN(num2)) {
-         
-      document.getElementById('out').innerHTML = 'ERROR';
-         return;
-     }
-     if (num1 === "" || num2 === "") { 
-      document.getElementById('out').innerHTML = 'Вы ничего не ввели!';
-          return;
-     }
-          
-     result = num1 - num2;
-     document.getElementById('out').innerHTML = result;
 }
-    function mult() {
-         
-     num1 = document.getElementById('n1').value;
-     num1 = +num1;
 
-     num2 = document.getElementById('n2').value;
-     num2 = +num2;
-
-     if (isNaN (num1) || isNaN(num2)) {
-         
-      document.getElementById('out').innerHTML = 'ERROR';
-         return;
-     }
-     if (num1 === "" || num2 === "") { 
-      document.getElementById('out').innerHTML = 'Вы ничего не ввели!';
-          return;
-     }
-          
-     result = num1 * num2;
-     document.getElementById('out').innerHTML = result;
+  function sum() {
+        if (calc.check()) {
+        let result =  this.input_num_1 + this.input_num_2
+          console.log(result)
+        document.getElementById('out').innerHTML = result;
+    }
 }
-    function div() {
-         
-     num1 = document.getElementById('n1').value;
-     num1 = +num1;
-
-     num2 = document.getElementById('n2').value;
-     num2 = +num2;
-
-     if (isNaN (num1) || isNaN(num2)) {
-         
-      document.getElementById('out').innerHTML = 'ERROR';
-         return;
-     }
-     if (num1 === "" || num2 === "") { 
-      document.getElementById('out').innerHTML = 'Вы ничего не ввели!';
-          return;
-     }
-          
-     result = num1 / num2;
-     document.getElementById('out').innerHTML = result;
+function sub() {
+    if (calc.check()) {
+    let result =  this.input_num_1 - this.input_num_2
+      console.log(result)
+    document.getElementById('out').innerHTML = result;
+}
 }
